@@ -169,10 +169,9 @@ Note: This is part 1 of the profile update feature. Following PRs will handle st
 
 ### Tips for Better PRs:
 1. One feature or fix per PR
-2. Keep changes under 300 lines when possible
-3. Clear, focused description of changes
-4. Include relevant tests only
-5. Add screenshots for UI changes
+2. Clear, focused description of changes
+3. Include relevant tests only
+4. Add screenshots for UI changes
 
 ## Collaboration Tools
 
@@ -210,30 +209,8 @@ A well-configured toolset makes repository management much easier:
      * Build processes
      * Deployment automation
 
-## Best Practices
-
-Here are some key practices that have worked well in my experience:
-
-1. **Commit Messages**
-   - Use clear, descriptive messages
-   - Follow a consistent format
-   - Reference issue numbers when applicable
-
-2. **Branch Management**
-   - Keep branches short-lived
-   - Delete merged branches
-   - Regularly update from main/master
-
-3. **Code Reviews**
-   - Review code in small chunks
-   - Provide constructive feedback
-   - Use automated code quality tools
-
 ## Conclusion
 
 Repository management is a fundamental skill in modern software development. While it might seem overwhelming at first, starting with these basics and gradually improving your workflow will lead to more efficient team collaboration.
 
 Remember that the goal is to find what works best for your team. Start with these foundations and adjust based on your team's needs and feedback.
-
----
-*Written by Fadhilah Metra, Full-stack Developer at e-dash*
