@@ -29,15 +29,21 @@ When setting up your development environment, you'll need to choose between two 
 
 ### 1. Multi-repository
 ```
-my-company/
-├── frontend/
-│   ├── web-client/
-│   └── mobile-client/
-├── backend/
-│   ├── api-service/
-│   └── auth-service/
-└── shared/
-    └── common-libs/
+company-projects/
+├── project-a/ <-- separate repository
+│   ├── src/
+│   ├── tests/
+│   └── docs/
+│
+├── project-b/ <-- separate repository
+│   ├── src/
+│   ├── tests/
+│   └── docs/
+│
+└── project-c/ <-- separate repository
+    ├── src/
+    ├── tests/
+    └── docs/
 ```
 
 **Advantages:**
@@ -53,16 +59,21 @@ my-company/
 
 ### 2. Mono-repository
 ```
-my-company/
-└── main-project/
-    ├── frontend/
-    │   ├── web-client/
-    │   └── mobile-client/
-    ├── backend/
-    │   ├── api-service/
-    │   └── auth-service/
-    └── shared/
-        └── common-libs/
+company-monorepo/ <-- single repository
+├── project-a/
+│   ├── src/
+│   ├── tests/
+│   └── docs/
+│
+├── project-b/
+│   ├── src/
+│   ├── tests/
+│   └── docs/
+│
+└── project-c/
+    ├── src/
+    ├── tests/
+    └── docs/
 ```
 
 **Advantages:**
@@ -81,65 +92,25 @@ my-company/
 Let's explore three effective branching strategies and when to use each one:
 
 ### 1. Trunk-based Development
-Best for small teams with good test coverage.
+Best for small teams that needs to create new features or MVP quickly.
 
-```bash
-# Start your day by updating main
-git checkout main
-git pull
-
-# Make your changes
-# ... work on code ...
-
-# Regular commits
-git add .
-git commit -m "Add: user profile validation"
-git push
-
-# If there are conflicts
-git pull --rebase
-# Fix conflicts and continue
-git rebase --continue
-```
+<p align="center">
+   <img src="./assets/trunk-based_development.png" height="400">
+</p>
 
 ### 2. Feature Branching
 Perfect for teams working on multiple features simultaneously.
 
-```bash
-# Create feature branch
-git checkout -b feature/user-profiles
-
-# Regular commits while working
-git add .
-git commit -m "Add: profile image upload"
-
-# Keep branch updated with main
-git checkout main
-git pull
-git checkout feature/user-profiles
-git merge main
-
-# Push changes and create PR
-git push origin feature/user-profiles
-```
+<p align="center">
+   <img src="./assets/feature_branching.png" height="400">
+</p>
 
 ### 3. Git Flow
 Suitable for projects with scheduled releases.
 
-```bash
-# Feature development
-git checkout -b feature/new-feature develop
-# ... work on feature ...
-git checkout develop
-git merge feature/new-feature
-
-# Release preparation
-git checkout -b release/1.0.0 develop
-# ... final testing and fixes ...
-git checkout main
-git merge release/1.0.0
-git tag -a v1.0.0 -m "Version 1.0.0"
-```
+<p align="center">
+   <img src="./assets/git_flow.svg" height="400">
+</p>
 
 ## Code Reviews and Pull Requests
 
